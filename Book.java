@@ -13,6 +13,7 @@ class Book
     private String title;
 
     /**
+     * exercise 2.83
      * Set the author and title fields when this object
      * is constructed.
      */
@@ -23,4 +24,18 @@ class Book
     }
 
     // Add the methods here ...
+    /**
+     * Accessor method to return author filed
+     */
+    public String getAuthor()
+    {
+     return author;   
+    }
+    /**
+     * Accessor method to return title filed
+     */
+    public String getTitle()
+    {
+     return title;   
+    }
 }
