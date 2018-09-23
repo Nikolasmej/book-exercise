@@ -80,6 +80,11 @@ class Book
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Pages: " + pages);
+        //exercise 2.89
+        if (refNumber.length()==0)
+           System.out.println("- Ref #: ZZZ "); 
+        else 
+           System.out.println("- Ref #: " + refNumber);  
     }
     
     /**
@@ -87,7 +92,12 @@ class Book
      */
     public void setRefNumber(String ref)
     {
-        refNumber = ref;  
+        //exercise 2.90
+        if (ref.length()>=3)
+            refNumber = ref;  
+        
+        else 
+            System.out.println("Error, at least three digits. " );  
     }
     
     /**
