@@ -15,12 +15,17 @@ class Book
     private int pages;
     // EX 2.88
     private String refNumber;
+    //Ex 2.91
+    private int borrowed;
+    //Ex 2.92
+    private boolean courseText;
     /**
      
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle,int numberPages)
+    public Book(String bookAuthor, String bookTitle,int numberPages,
+                boolean bookText)
     {
         author = bookAuthor;
         title = bookTitle;
@@ -28,9 +33,17 @@ class Book
         pages = numberPages;
         // EX 2.88
         refNumber = "";
+        // Ex 2.92
+        courseText = bookText;
         
     }
-
+    /** exercise 2.92
+     * constructor to set boolean value
+     */
+    public Book()
+    {
+     courseText = false;   
+    }
     // Add the methods here ...
     /** exercise 2.83
      * Accessor method to return author field
@@ -85,6 +98,8 @@ class Book
            System.out.println("- Ref #: ZZZ "); 
         else 
            System.out.println("- Ref #: " + refNumber);  
+        //exercise 2.90
+        System.out.print("Book has been borrowed: " + borrowed);
     }
     
     /**
@@ -108,5 +123,25 @@ class Book
         return refNumber;  
     }
     
-    
+    /**
+     * ex 2.91 mutator method to set # times boook is borrowed
+     */
+    public void setBorrow()
+    {
+        borrowed =+ 1;  
+    }
+    /**
+     * ex 2.91 mutator method to update # times boook is borrowed
+     */
+    public int getBorrow()
+    {
+        return borrowed;  
+    }
+    /**
+     * ex 2.92 acessor method to return boolean
+     */
+    public boolean isCourseText()
+    {
+        return courseText;  
+    }
 }
